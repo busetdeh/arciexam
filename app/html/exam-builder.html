@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><title>ARCI EXAM - Pembangun Ujian (Exam Builder)</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-error":"#ffffff","secondary":"#006591","secondary-fixed":"#c9e6ff","on-secondary-container":"#004666","on-tertiary-fixed":"#002113","on-primary-fixed-variant":"#37466a","on-secondary":"#ffffff","primary":"#000922","error":"#ba1a1a","on-tertiary-fixed-variant":"#005236","tertiary-fixed":"#6ffbbe","surface-bright":"#f8f9ff","on-error-container":"#93000a","surface-container-lowest":"#ffffff","on-surface-variant":"#45464e","secondary-container":"#39b8fd","tertiary-container":"#002718","on-tertiary":"#ffffff","surface-container-highest":"#d3e4fe","surface-container-low":"#eff4ff","error-container":"#ffdad6","inverse-primary":"#b6c6f1","background":"#f8f9ff","tertiary":"#000d06","inverse-on-surface":"#eaf1ff","on-background":"#0b1c30","on-secondary-fixed-variant":"#004c6e","on-secondary-fixed":"#001e2f","outline-variant":"#c5c6cf","surface-container-high":"#dce9ff","primary-container":"#0f2042","on-primary-container":"#7988b0","on-surface":"#0b1c30","secondary-fixed-dim":"#89ceff","surface-container":"#e5eeff","on-primary":"#ffffff","surface-variant":"#d3e4fe","tertiary-fixed-dim":"#4edea3","surface-tint":"#4f5e83","surface-dim":"#cbdbf5","primary-fixed":"#d9e2ff","inverse-surface":"#213145","primary-fixed-dim":"#b6c6f1","surface":"#f8f9ff","on-primary-fixed":"#081a3c","on-tertiary-container":"#009c6b","outline":"#75777f"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"1.5rem","margin-sm":"1rem","space-sm":"0.5rem","space-md":"1rem","gutter-sm":"1rem","space-xl":"2.5rem","space-lg":"1.5rem","space-xs":"0.25rem","margin":"2rem"},"fontFamily":{"body-md":["Inter"],"headline-lg":["Plus Jakarta Sans"],"label-md":["Inter"],"label-lg":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"label-timer":["Inter"],"display-lg":["Plus Jakarta Sans"]},"fontSize":{"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg-mobile":["30px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-timer":["18px",{"lineHeight":"22px","letterSpacing":"0.05em","fontWeight":"700"}],"display-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center justify-between bg-surface-container-low"><a class="flex items-center gap-space-sm" href="portal.html"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-surface-container-lowest text-[20px]">verified_user</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">ARCI EXAM</span><span class="font-label-md text-label-md text-secondary font-semibold uppercase tracking-wider">Portal Instruktur</span></div></a></div><nav class="flex flex-col gap-space-xs px-space-md py-space-md" data-active-classes="bg-primary-container text-surface-container-lowest font-semibold rounded-lg"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dasbor-utama" href="instructor-dashboard.html"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-label-lg text-label-lg">Dasbor Utama</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="daftar-ujian-saya" href="instructor-dashboard.html#daftar-ujian"><span class="material-symbols-outlined text-[20px]">assignment</span><span class="font-label-lg text-label-lg">Daftar Ujian Saya</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="bank-soal" href="instructor-dashboard.html#bank-soal"><span class="material-symbols-outlined text-[20px]">source</span><span class="font-label-lg text-label-lg">Bank Soal</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm transition-all bg-primary-container text-surface-container-lowest font-semibold rounded-lg" data-path="pembangun-ujian" href="exam-builder.html"><span class="material-symbols-outlined text-[20px]">construction</span><span class="font-label-lg text-label-lg">Pembangun Ujian</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="pengawasan-langsung" href="proctor-console.html"><span class="material-symbols-outlined text-[20px]">videocam</span><span class="font-label-lg text-label-lg">Pengawasan Langsung</span><span class="ml-auto w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="analisis-hasil" href="analytics-results.html"><span class="material-symbols-outlined text-[20px]">insights</span><span class="font-label-lg text-label-lg">Analisis &amp; Hasil</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="pengaturan-kelas" href="admin-dashboard.html"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-label-lg text-label-lg">Pengaturan Kelas</span></a></nav></div><div class="p-space-md flex flex-col gap-space-sm"><div class="px-space-md py-space-sm rounded-lg bg-surface-container flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span><span class="font-label-md text-label-md text-on-surface">Server Aktif</span></div><span class="font-label-md text-label-md text-on-surface-variant font-mono">28ms</span></div><div class="flex flex-col gap-space-xs"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="bantuan-dokumentasi" href="index.html"><span class="material-symbols-outlined text-[20px]">help_center</span><span class="font-label-md text-label-md">Direktori Template &amp; Panduan</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-error hover:bg-error-container hover:text-on-error-container transition-all" data-path="keluar" href="login.html"><span class="material-symbols-outlined text-[20px]">logout</span><span class="font-label-md text-label-md font-semibold">Keluar Akun</span></a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-gutter flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md flex-1 max-w-lg"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full pl-9 pr-4 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="Cari mata kuliah, ujian, atau bank soal..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-sm px-space-md py-1.5 rounded-lg bg-surface-container-low"><span class="material-symbols-outlined text-secondary text-[18px]">school</span><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Universitas Indonesia</span><span class="font-body-sm text-[11px] text-on-surface-variant leading-tight">Fak. Ilmu Komputer</span></div><span class="material-symbols-outlined text-on-surface-variant text-[16px] ml-1">expand_more</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="hidden xl:flex flex-col text-right"><span class="font-label-lg text-label-lg text-on-surface font-semibold leading-tight">Dr. Aris Setiawan, M.Kom</span><span class="font-label-md text-label-md text-on-surface-variant leading-tight">Guru / Dosen Senior / Lead Author</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="relative pt-16 w-full min-h-screen bg-background"><div class="flex flex-col w-full">
+<!-- Sub-Header / Breadcrumb Stepper Panel -->
+<section class="w-full bg-surface-container-lowest px-gutter py-space-md shadow-sm sticky top-16 z-30">
+<div class="max-w-[1720px] mx-auto flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<!-- Title & Metadata -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-semibold tracking-wide">
+            EXAM-CS301-2024
+          </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container animate-pulse"></span>
+            Draf Otomatis Disimpan (09:42:15 WIB)
+          </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-mono font-label-md text-[11px]">
+            v2.4-revised
+          </span>
+</div>
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-md text-headline-md text-primary tracking-tight">
+            CS301: Algoritma &amp; Struktur Data (UAS Teori &amp; Pemrograman)
+          </h1>
+<button class="p-1 text-on-surface-variant hover:text-primary transition-colors" title="Ubah Judul Ujian">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</div>
+<!-- Action Stepper -->
+<div class="flex items-center gap-space-xs sm:gap-space-sm overflow-x-auto py-1">
+<!-- Step 1: Completed -->
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant">
+<div class="w-5 h-5 rounded-full bg-on-tertiary-container text-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<span class="font-label-md text-label-md font-medium whitespace-nowrap">1. Info Umum</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[16px]">chevron_right</span>
+<!-- Step 2: Active -->
+<div class="flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-primary-container text-surface-container-lowest shadow-sm">
+<div class="w-5 h-5 rounded-full bg-secondary-container text-primary-container font-label-md text-[11px] font-bold flex items-center justify-center">
+            2
+          </div>
+<span class="font-label-md text-label-md font-semibold whitespace-nowrap">2. Perakitan Butir Soal</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[16px]">chevron_right</span>
+<!-- Step 3: Pending -->
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant opacity-75">
+<div class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface font-label-md text-[11px] font-medium flex items-center justify-center">
+            3
+          </div>
+<span class="font-label-md text-label-md font-medium whitespace-nowrap">3. Parameter Integritas</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[16px]">chevron_right</span>
+<!-- Step 4: Pending -->
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant opacity-75">
+<div class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface font-label-md text-[11px] font-medium flex items-center justify-center">
+            4
+          </div>
+<span class="font-label-md text-label-md font-medium whitespace-nowrap">4. Tinjauan</span>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center gap-space-sm">
+<a class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-low text-primary hover:bg-surface-container transition-colors shadow-sm font-label-md text-label-md" href="student-exam.html" target="_blank">
+<span class="material-symbols-outlined text-[18px] text-secondary">visibility</span>
+<span>Pratinjau Siswa / Mahasiswa</span>
+</a>
+<button class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors font-label-md text-label-md" onclick="alert('Draf perakitan ujian berhasil disimpan.')" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Simpan Draf</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary-container text-surface-container-lowest hover:bg-primary transition-all shadow font-label-md text-label-md font-semibold" onclick="alert('Ujian berhasil dipublikasikan & siap dijadwalkan!')" type="button">
+<span>Lanjut ke Parameter</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Workspace Container: Two Main Panels + Inspector Drawer -->
+<div class="max-w-[1720px] mx-auto w-full p-gutter flex flex-col 2xl:flex-row gap-space-lg items-start">
+<!-- LEFT PANEL (35%): Bank Soal Drawer / Library -->
+<aside class="w-full 2xl:w-[35%] flex flex-col gap-space-md shrink-0">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md">
+<!-- Header Panel Kiri -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">source</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Bank Soal CS301</h2>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-[11px] font-semibold">
+            240 Butir Tersedia
+          </span>
+</div>
+<!-- Filter & Search Controls -->
+<div class="flex flex-col gap-space-sm">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full pl-9 pr-4 py-2 bg-surface-container-low rounded-lg text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary transition-all" placeholder="Cari berdasarkan tag, kata kunci, ID..." type="text"/>
+</div>
+<!-- Quick Filters Tags -->
+<div class="flex flex-wrap items-center gap-1.5">
+<button class="px-2.5 py-1 rounded-md bg-primary-container text-surface-container-lowest font-label-md text-[11px] font-medium flex items-center gap-1">
+<span>Semua Topik</span>
+</button>
+<button class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-[11px] transition-colors">
+              Graf &amp; Lintasan
+            </button>
+<button class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-[11px] transition-colors">
+              Heap &amp; Prioritas
+            </button>
+<button class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-[11px] transition-colors">
+              Kompleksitas
+            </button>
+<button class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-[11px] transition-colors">
+              Pohon Biner
+            </button>
+</div>
+<!-- Secondary Filters: Tipe Soal & Kesulitan -->
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<div class="relative">
+<select class="w-full px-2.5 py-1.5 bg-surface-container-low rounded-lg text-on-surface-variant font-label-md text-[12px] appearance-none focus:outline-none cursor-pointer">
+<option>Semua Tingkat (Mudah-Sulit)</option>
+<option>Hanya Tingkat: Mudah</option>
+<option>Hanya Tingkat: Sedang</option>
+<option>Hanya Tingkat: Sulit / HOTS</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px] pointer-events-none">unfold_more</span>
+</div>
+<div class="relative">
+<select class="w-full px-2.5 py-1.5 bg-surface-container-low rounded-lg text-on-surface-variant font-label-md text-[12px] appearance-none focus:outline-none cursor-pointer">
+<option>Semua Tipe Butir</option>
+<option>Pilihan Ganda (PG)</option>
+<option>Sandbox Kode (Live Exec)</option>
+<option>Esai Analitis Terstruktur</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px] pointer-events-none">unfold_more</span>
+</div>
+</div>
+</div>
+<!-- Action Bar: Import & Create -->
+<div class="flex items-center gap-space-xs pt-1">
+<button class="flex-1 inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md transition-colors">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+<span>Impor QTI/CSV</span>
+</button>
+<button class="flex-1 inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-secondary hover:bg-on-secondary-container text-surface-container-lowest font-label-md text-label-md transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>+ Buat Butir Baru</span>
+</button>
+</div>
+<!-- Scrollable List of Ready-to-use Question Items -->
+<div class="flex flex-col gap-space-sm max-h-[720px] overflow-y-auto pr-1">
+<!-- Question Bank Item 1 -->
+<div class="group p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-grab active:cursor-grabbing shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-outline text-[18px] group-hover:text-primary">drag_indicator</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-secondary font-label-md text-[11px] font-semibold">
+                  Pilihan Ganda
+                </span>
+<span class="px-2 py-0.5 rounded bg-surface-bright text-on-surface-variant font-label-md text-[11px]">
+                  Sedang
+                </span>
+</div>
+<span class="font-label-md text-[11px] font-bold text-primary">15 Poin</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface line-clamp-2 leading-snug">
+              Analisis Asimtotik Graf Berbobot Dijkstra vs Bellman-Ford pada kasus representasi Adjacency List.
+            </p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-md text-[11px] text-on-surface-variant">Topik: Algoritma Graf</span>
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-lowest hover:bg-primary-container hover:text-surface-container-lowest text-primary font-label-md text-[11px] font-semibold transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Tambah</span>
+</button>
+</div>
+</div>
+<!-- Question Bank Item 2 -->
+<div class="group p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-grab active:cursor-grabbing shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-outline text-[18px] group-hover:text-primary">drag_indicator</span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-md text-[11px] font-semibold">
+                  Sandbox Python
+                </span>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-md text-[11px] font-bold">
+                  HOTS / Sulit
+                </span>
+</div>
+<span class="font-label-md text-[11px] font-bold text-primary">25 Poin</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface line-clamp-2 leading-snug">
+              Implementasi Fibonacci Heap amortized delete-min &amp; cascade cut handling untuk antrean prioritas dinamis.
+            </p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-md text-[11px] text-on-surface-variant">Topik: Heap &amp; Kompleksitas</span>
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-lowest hover:bg-primary-container hover:text-surface-container-lowest text-primary font-label-md text-[11px] font-semibold transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Tambah</span>
+</button>
+</div>
+</div>
+<!-- Question Bank Item 3 -->
+<div class="group p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-grab active:cursor-grabbing shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-outline text-[18px] group-hover:text-primary">drag_indicator</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-md text-[11px] font-semibold">
+                  Esai Analitis Rubrik
+                </span>
+<span class="px-2 py-0.5 rounded bg-surface-bright text-on-surface-variant font-label-md text-[11px]">
+                  Sedang
+                </span>
+</div>
+<span class="font-label-md text-[11px] font-bold text-primary">20 Poin</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface line-clamp-2 leading-snug">
+              Optimasi Minimum Spanning Tree: Komparasi algoritma Prim vs Kruskal pada graf rapat (dense) vs graf renggang (sparse).
+            </p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-md text-[11px] text-on-surface-variant">Topik: Minimum Spanning Tree</span>
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-lowest hover:bg-primary-container hover:text-surface-container-lowest text-primary font-label-md text-[11px] font-semibold transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Tambah</span>
+</button>
+</div>
+</div>
+<!-- Question Bank Item 4 -->
+<div class="group p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-grab active:cursor-grabbing shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-outline text-[18px] group-hover:text-primary">drag_indicator</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-secondary font-label-md text-[11px] font-semibold">
+                  Pilihan Ganda
+                </span>
+<span class="px-2 py-0.5 rounded bg-surface-bright text-on-tertiary-container font-label-md text-[11px] font-semibold">
+                  Mudah
+                </span>
+</div>
+<span class="font-label-md text-[11px] font-bold text-primary">10 Poin</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface line-clamp-2 leading-snug">
+              Deteksi Siklus Negatif Bellman-Ford dan jumlah relaksasi iterasi |V|-1 pada matriks konektivitas.
+            </p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-md text-[11px] text-on-surface-variant">Topik: Algoritma Graf</span>
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-lowest hover:bg-primary-container hover:text-surface-container-lowest text-primary font-label-md text-[11px] font-semibold transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Tambah</span>
+</button>
+</div>
+</div>
+<!-- Question Bank Item 5 -->
+<div class="group p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-grab active:cursor-grabbing shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-outline text-[18px] group-hover:text-primary">drag_indicator</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-secondary font-label-md text-[11px] font-semibold">
+                  Pilihan Ganda
+                </span>
+<span class="px-2 py-0.5 rounded bg-surface-bright text-on-tertiary-container font-label-md text-[11px] font-semibold">
+                  Mudah
+                </span>
+</div>
+<span class="font-label-md text-[11px] font-bold text-primary">10 Poin</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface line-clamp-2 leading-snug">
+              Representasi Memori Adjacency Matrix vs Adjacency List untuk graf n-simpul dengan derajat rata-rata k konstan.
+            </p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-md text-[11px] text-on-surface-variant">Topik: Struktur Data Graf</span>
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-lowest hover:bg-primary-container hover:text-surface-container-lowest text-primary font-label-md text-[11px] font-semibold transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Tambah</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- RIGHT PANEL (65%): Kanvas Perakitan Lembar Ujian (Exam Sheet Canvas) -->
+<main class="w-full 2xl:flex-1 flex flex-col gap-space-lg">
+<!-- Metrics Dashboard Banner -->
+<section class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-md">
+<!-- Metric 1: Total Questions -->
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">format_list_numbered</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant">Butir Terpasang</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-primary font-bold">3</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ 3 Butir Siap</span>
+</div>
+</div>
+</div>
+<!-- Metric 2: Points Accumulation Progress -->
+<div class="flex flex-col min-w-[200px]">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-md text-label-md text-on-surface-variant">Akumulasi Bobot</span>
+<span class="font-label-lg text-label-lg font-bold text-primary">70 / 100 Poin</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full transition-all duration-500" style="width: 70%;"></div>
+</div>
+<span class="font-label-md text-[11px] text-error mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">info</span>
+            Kurang 30 Poin untuk mencapai kuota 100
+          </span>
+</div>
+<!-- Metric 3: Estimated Exam Duration -->
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[26px]">schedule</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant">Estimasi Waktu Pengerjaan</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-primary font-bold">95</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ 120 Menit Alokasi</span>
+</div>
+</div>
+</div>
+<!-- Metric 4: Randomization Status -->
+<div class="flex flex-col gap-1 pl-2">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Acak Soal: Aktif</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Acak Pilihan: Aktif</span>
+</div>
+</div>
+</section>
+<!-- SECTION A: Teori Kompleksitas & Struktur Graf -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between bg-surface-container-high px-space-md py-2.5 rounded-xl shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">folder_open</span>
+<div>
+<span class="font-headline-sm text-[16px] text-primary font-bold">Bagian A: Teori Kompleksitas &amp; Struktur Graf</span>
+<span class="ml-2 font-label-md text-[12px] text-on-surface-variant font-medium">(Subtotal: 15 Poin • 1 Butir Soal)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">expand_less</span>
+</button>
+</div>
+</div>
+<!-- Assembled Card 1 (Multiple Choice with Image preview) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md relative group transition-all">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<button class="cursor-grab active:cursor-grabbing text-outline hover:text-primary transition-colors p-1" title="Tarik untuk memindahkan urutan">
+<span class="material-symbols-outlined text-[20px]">drag_indicator</span>
+</button>
+<span class="px-2.5 py-0.5 rounded bg-primary-container text-surface-container-lowest font-label-md text-label-md font-bold">
+                #1 (Bagian A)
+              </span>
+<span class="px-2.5 py-0.5 rounded bg-surface-container-highest text-secondary font-label-md text-label-md font-semibold">
+                Pilihan Ganda
+              </span>
+<span class="inline-flex items-center gap-1 font-label-md text-[11px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-on-tertiary-container">shuffle</span>
+                Opsi Diacak
+              </span>
+</div>
+<!-- Card Actions -->
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" title="Duplikasi">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" title="Edit Soal">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-error hover:bg-error-container hover:text-on-error-container transition-colors" title="Hapus dari Ujian">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Prompt Question Body -->
+<div class="flex flex-col gap-space-sm">
+<p class="font-body-lg text-body-lg text-primary leading-relaxed">
+              Diberikan sebuah graf berbobot non-negatif terarah <span class="font-mono font-semibold">G = (V, E)</span> dengan <span class="font-mono">|V| = 10.000</span> dan <span class="font-mono">|E| = 50.000</span>. Tentukan efisiensi waktu asimtotik terburuk (worst-case complexity) untuk pencarian lintasan terpendek sumber-tunggal (Single-Source Shortest Path) menggunakan algoritma <strong>Dijkstra</strong> jika diimplementasikan dengan <em>Binary Min-Heap</em> dibandingkan dengan <em>Fibonacci Heap</em>.
+            </p>
+<!-- Inline Graph Visualization Diagram Preview -->
+<div class="flex flex-col sm:flex-row items-center gap-space-md p-space-sm bg-surface-container-low rounded-xl">
+<div class="w-full sm:w-48 h-28 rounded-lg overflow-hidden shrink-0 bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="Technical clean vector diagram of a directed weighted graph G=(V,E) showing 5 interconnected nodes labeled A through E with integer weights on directed arrows, clean educational aesthetic, navy blue and cyan line highlights on crisp white and light blue gradient background, high-resolution scientific graphic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAigQZ19L6DpI6ac4UwFgqfvaFDXu6gDBynpzz6vbVsdCl5qfmRU5MTaN0JD2LCuRlmQm0K2B4_OaFPrwbx2Rf_zNDucNwZfW1RJaU0KuC2VG1DKbXtU-KBNZH_17iISsI_93D4v0brfqosPQgolqaOmK-YWiRD_hi2bQPWfUXVMfp0Ke5QtMsIqLRtPXfe3irh1wZoGScL-MyVqx_En4pwI-8vj15Ppgzn5-_3_94"/>
+</div>
+<div class="flex flex-col gap-1 text-on-surface-variant font-body-sm text-[12px]">
+<span class="font-semibold text-primary">Lampiran Diagram Graf: #DIAG-CS301-G1</span>
+<span>Dimensi node dense sparse matrix, file resolusi tinggi SVG terkompresi otomatis.</span>
+<span class="text-secondary font-medium">Resolusi layar responsif adaptif sesuai layar ujian siswa / mahasiswa.</span>
+</div>
+</div>
+<!-- Answer Options Representation -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-xs pt-1">
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low text-on-surface text-body-md font-body-md">
+<span class="w-6 h-6 rounded bg-surface-container-highest text-primary font-bold text-center leading-6 shrink-0">A</span>
+<span>O(|E| log |V|) vs O(|E| + |V| log |V|) (Kunci Jawaban Valid)</span>
+<span class="material-symbols-outlined text-on-tertiary-container text-[18px] ml-auto">check_circle</span>
+</div>
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-lowest text-on-surface-variant text-body-md font-body-md">
+<span class="w-6 h-6 rounded bg-surface-container-low text-on-surface-variant font-bold text-center leading-6 shrink-0">B</span>
+<span>O(|V|^2) vs O(|E| log |V|)</span>
+</div>
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-lowest text-on-surface-variant text-body-md font-body-md">
+<span class="w-6 h-6 rounded bg-surface-container-low text-on-surface-variant font-bold text-center leading-6 shrink-0">C</span>
+<span>O(|E| + |V|) vs O(|V| log |E|)</span>
+</div>
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-lowest text-on-surface-variant text-body-md font-body-md">
+<span class="w-6 h-6 rounded bg-surface-container-low text-on-surface-variant font-bold text-center leading-6 shrink-0">D</span>
+<span>O(|E| log |E|) vs O(|V|^2)</span>
+</div>
+</div>
+</div>
+<!-- Bottom Config Row for Question 1 -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs bg-surface-container-low/60 -mx-space-md -mb-space-md p-space-md rounded-b-xl">
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface-variant">Bobot Poin:</span>
+<input class="w-16 px-2 py-1 bg-surface-container-lowest rounded text-center font-bold text-primary font-label-lg focus:outline-none focus:ring-1 focus:ring-secondary" type="number" value="15"/>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface-variant">Batas Waktu:</span>
+<input class="w-16 px-2 py-1 bg-surface-container-lowest rounded text-center font-body-md text-primary focus:outline-none focus:ring-1 focus:ring-secondary" type="number" value="10"/>
+<span class="font-label-md text-[11px] text-on-surface-variant">Menit</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface-variant">Pinalti Salah:</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono text-[11px] font-semibold text-on-surface-variant">-0 Poin</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-[11px] text-on-surface-variant">ID: Q-CS301-094</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION B: Implementasi Algoritma & Sandbox Kode -->
+<section class="flex flex-col gap-space-sm mt-space-xs">
+<div class="flex items-center justify-between bg-surface-container-high px-space-md py-2.5 rounded-xl shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">code</span>
+<div>
+<span class="font-headline-sm text-[16px] text-primary font-bold">Bagian B: Implementasi Algoritma &amp; Sandbox Kode</span>
+<span class="ml-2 font-label-md text-[12px] text-on-surface-variant font-medium">(Subtotal: 55 Poin • 2 Butir Soal)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">expand_less</span>
+</button>
+</div>
+</div>
+<!-- Assembled Card 2: Interactive Isolated Code Sandbox -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md relative group transition-all">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<button class="cursor-grab active:cursor-grabbing text-outline hover:text-primary transition-colors p-1" title="Tarik untuk memindahkan urutan">
+<span class="material-symbols-outlined text-[20px]">drag_indicator</span>
+</button>
+<span class="px-2.5 py-0.5 rounded bg-primary-container text-surface-container-lowest font-label-md text-label-md font-bold">
+                #2 (Bagian B)
+              </span>
+<span class="px-2.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-semibold">
+                Sandbox Kode Terisolasi (Python 3.11)
+              </span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" title="Duplikasi">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" title="Edit Soal">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-error hover:bg-error-container hover:text-on-error-container transition-colors" title="Hapus dari Ujian">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Prompt Question Body -->
+<div class="flex flex-col gap-space-sm">
+<p class="font-body-lg text-body-lg text-primary leading-relaxed">
+              Lengkapi modul fungsi <code class="px-1.5 py-0.5 rounded bg-surface-container font-mono text-[13px] text-primary">find_shortest_path(graph: Dict, start: str, end: str) -&gt; Tuple[int, List[str]]</code> menggunakan struktur data <em>Fibonacci Heap</em> untuk menjamin kompleksitas waktu amortisasi minimum. Pastikan mengembalikan total biaya dan lintasan simpul terurut.
+            </p>
+<!-- Code Sandbox Snippet Preview -->
+<div class="rounded-xl bg-primary-container text-surface-bright p-space-sm font-mono text-body-sm overflow-x-auto shadow-inner">
+<div class="flex items-center justify-between pb-2 mb-2 bg-primary/40 -mx-space-sm -mt-space-sm px-space-sm py-1.5 text-on-primary-container text-[11px]">
+<span class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container"></span>
+<span class="ml-2 font-sans font-semibold">solution_template.py</span>
+</span>
+<span>Batas Eksekusi: 2000 ms</span>
+</div>
+<pre class="text-surface-container-highest"><code><span class="text-on-primary-container">class</span> <span class="text-secondary-fixed">FibonacciHeap</span>:
+    <span class="text-on-primary-container">def</span> <span class="text-secondary-fixed-dim">__init__</span>(<span class="text-surface-bright">self</span>):
+        <span class="text-surface-bright">self.min_node = None</span>
+        <span class="text-surface-bright">self.total_nodes = 0</span>
+
+<span class="text-on-primary-container">def</span> <span class="text-secondary-fixed-dim">find_shortest_path</span>(graph: dict, start: str, end: str):
+    <span class="text-outline-variant"># Tulis implementasi siswa / mahasiswa di sini</span>
+    <span class="text-secondary-container">pass</span></code></pre>
+</div>
+<!-- Auto-grading Sandbox Parameters -->
+<div class="flex flex-wrap items-center gap-space-sm text-body-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-high text-primary font-semibold text-[12px]">
+<span class="material-symbols-outlined text-[16px] text-secondary">fact_check</span>
+                5 Unit Test Case (3 Publik, 2 Tersembunyi)
+              </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-high text-primary font-semibold text-[12px]">
+<span class="material-symbols-outlined text-[16px] text-secondary">memory</span>
+                Alokasi Memori: 256 MB
+              </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-high text-primary font-semibold text-[12px]">
+<span class="material-symbols-outlined text-[16px] text-secondary">security</span>
+                Modul Dilarang: <code class="font-mono text-[11px]">sys, os, subprocess</code>
+</span>
+</div>
+</div>
+<!-- Bottom Config Row -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs bg-surface-container-low/60 -mx-space-md -mb-space-md p-space-md rounded-b-xl">
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface-variant">Bobot Poin:</span>
+<input class="w-16 px-2 py-1 bg-surface-container-lowest rounded text-center font-bold text-primary font-label-lg focus:outline-none focus:ring-1 focus:ring-secondary" type="number" value="25"/>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface-variant">Batas Waktu:</span>
+<input class="w-16 px-2 py-1 bg-surface-container-lowest rounded text-center font-body-md text-primary focus:outline-none focus:ring-1 focus:ring-secondary" type="number" value="45"/>
+<span class="font-label-md text-[11px] text-on-surface-variant">Menit</span>
+</div>
+</div>
+<span class="font-label-md text-[11px] text-on-surface-variant">ID: Q-CS301-208</span>
+</div>
+</div>
+<!-- Assembled Card 3: Analytical Structured Essay with AI Rubric -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md relative group transition-all">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<button class="cursor-grab active:cursor-grabbing text-outline hover:text-primary transition-colors p-1" title="Tarik untuk memindahkan urutan">
+<span class="material-symbols-outlined text-[20px]">drag_indicator</span>
+</button>
+<span class="px-2.5 py-0.5 rounded bg-primary-container text-surface-container-lowest font-label-md text-label-md font-bold">
+                #3 (Bagian B)
+              </span>
+<span class="px-2.5 py-0.5 rounded bg-surface-container-highest text-primary font-label-md text-label-md font-semibold">
+                Esai Analisis Konseptual
+              </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-secondary font-label-md text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[14px]">psychology</span>
+                Rubrik AI Terpasang
+              </span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" title="Duplikasi">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" title="Edit Soal">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-error hover:bg-error-container hover:text-on-error-container transition-colors" title="Hapus dari Ujian">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Question Body -->
+<div class="flex flex-col gap-space-sm">
+<p class="font-body-lg text-body-lg text-primary leading-relaxed">
+              Jelaskan mengapa algoritma <strong>Dijkstra</strong> mengalami kegagalan (anomali hasil) dalam menemukan lintasan terpendek saat graf memuat bobot rusuk bernilai negatif, meskipun graf tersebut tidak memiliki siklus negatif (negative cycle). Berikan contoh minimal ilustratif 3 simpul dan bandingkan solusinya bila diselesaikan dengan algoritma <strong>Bellman-Ford</strong>.
+            </p>
+<!-- Rubric Details Collapsible Strip -->
+<div class="p-space-sm bg-surface-container-low rounded-xl flex flex-col gap-2">
+<div class="flex items-center justify-between text-on-surface font-label-md text-label-md font-semibold">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">checklist</span>
+                  Kriteria Rubrik Penilaian Terstruktur (Total 30 Poin):
+                </span>
+<span class="text-secondary font-medium text-[12px] cursor-pointer hover:underline">Kelola Parameter Rubrik</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+<div class="bg-surface-container-lowest p-2 rounded-lg flex flex-col">
+<span class="font-label-md text-[11px] text-on-surface-variant">Kriteria 1: Argumen Greedy (10 P)</span>
+<span class="font-body-sm text-[12px] text-on-surface">Penjelasan sifat asumsi monotonik non-decreasing path distance.</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded-lg flex flex-col">
+<span class="font-label-md text-[11px] text-on-surface-variant">Kriteria 2: Contoh Tandingan (10 P)</span>
+<span class="font-body-sm text-[12px] text-on-surface">Validitas contoh graf 3 simpul dengan bobot negatif.</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded-lg flex flex-col">
+<span class="font-label-md text-[11px] text-on-surface-variant">Kriteria 3: Relaksasi Bellman (10 P)</span>
+<span class="font-body-sm text-[12px] text-on-surface">Mekanisme koreksi via iterasi relaksasi penuh |V|-1.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Config Row -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs bg-surface-container-low/60 -mx-space-md -mb-space-md p-space-md rounded-b-xl">
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface-variant">Bobot Poin:</span>
+<input class="w-16 px-2 py-1 bg-surface-container-lowest rounded text-center font-bold text-primary font-label-lg focus:outline-none focus:ring-1 focus:ring-secondary" type="number" value="30"/>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface-variant">Batas Waktu:</span>
+<input class="w-16 px-2 py-1 bg-surface-container-lowest rounded text-center font-body-md text-primary focus:outline-none focus:ring-1 focus:ring-secondary" type="number" value="40"/>
+<span class="font-label-md text-[11px] text-on-surface-variant">Menit</span>
+</div>
+</div>
+<span class="font-label-md text-[11px] text-on-surface-variant">ID: Q-CS301-412</span>
+</div>
+</div>
+</section>
+<!-- Interactive Drag and Drop Dropzone Indicator -->
+<div class="w-full rounded-2xl bg-surface-container-low/80 p-8 flex flex-col items-center justify-center gap-3 text-center cursor-pointer hover:bg-surface-container transition-all group">
+<div class="w-14 h-14 rounded-full bg-surface-container-lowest group-hover:scale-110 flex items-center justify-center text-secondary shadow-sm transition-transform">
+<span class="material-symbols-outlined text-[30px]">post_add</span>
+</div>
+<div class="flex flex-col gap-1 max-w-md">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">
+            Tarik &amp; Letakkan Soal dari Bank Soal di Samping
+          </span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Atau klik untuk membuka modal pembuat butir soal baru langsung pada bagian lembar ujian ini.
+          </p>
+</div>
+<div class="flex items-center gap-2 pt-2">
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest text-primary hover:bg-surface-container-high font-label-md text-label-md font-semibold transition-colors shadow-sm">
+            + Tambah Bagian Baru (Section)
+          </button>
+<button class="px-4 py-2 rounded-lg bg-secondary text-surface-container-lowest hover:bg-on-secondary-container font-label-md text-label-md font-semibold transition-colors shadow-sm">
+            + Tulis Soal Kosong
+          </button>
+</div>
+</div>
+</main>
+<!-- RIGHT-MOST INSPECTOR: Session & Security Telemetry Settings -->
+<aside class="w-full 2xl:w-[280px] shrink-0 flex flex-col gap-space-md">
+<!-- Session Timetable & Access Codes Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md">
+<div class="flex items-center gap-2 pb-2 bg-surface-container-low -mx-space-md -mt-space-md p-space-md rounded-t-xl">
+<span class="material-symbols-outlined text-secondary text-[20px]">tune</span>
+<h3 class="font-headline-sm text-[16px] text-primary font-bold">Parameter Sesi</h3>
+</div>
+<!-- Duration Setting -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium">Durasi Ujian Utama</label>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">timer</span>
+<span class="font-headline-sm text-[18px] text-primary font-bold">120</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Menit</span>
+</div>
+<button class="text-secondary font-label-md text-[12px] font-semibold hover:underline">Ubah</button>
+</div>
+</div>
+<!-- Exam Window -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium">Jendela Waktu Pelaksanaan</label>
+<div class="flex flex-col p-2.5 rounded-lg bg-surface-container-low gap-1 text-[12px]">
+<div class="flex items-center gap-1.5 text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px] text-secondary">calendar_today</span>
+<span>18 Nov 2024</span>
+</div>
+<span class="text-on-surface-variant font-mono">09:00 WIB - 11:30 WIB</span>
+</div>
+</div>
+<!-- Secure Access Code Token -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium">Token Akses Siswa / Mahasiswa</label>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container">
+<span class="font-mono text-label-timer text-[16px] font-bold tracking-wider text-primary">UI-CS301-AKR9</span>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" onclick="navigator.clipboard?.writeText('UI-CS301-AKR9');alert('Token UI-CS301-AKR9 disalin!');" title="Salin Token">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" title="Regenerasi Token">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Proctoring & Anti-Cheat Toggles (PRD Section 3.4 & 4.2) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-2 bg-surface-container-low -mx-space-md -mt-space-md p-space-md rounded-t-xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">shield</span>
+<h3 class="font-headline-sm text-[16px] text-primary font-bold">Integritas AI</h3>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container animate-pulse" title="AI Proctors Active"></span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Toggle 1: Kiosk Lockdown -->
+<div class="flex items-start justify-between gap-2 p-2 rounded-lg bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-primary">Mode Kiosk Lockdown</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Blokir navigasi tab &amp; shortcut split-screen</span>
+</div>
+<div class="w-10 h-5 bg-primary rounded-full relative flex items-center p-0.5 cursor-pointer shrink-0">
+<div class="w-4 h-4 bg-surface-container-lowest rounded-full ml-auto shadow-sm"></div>
+</div>
+</div>
+<!-- Toggle 2: Multi-face AI Detection -->
+<div class="flex items-start justify-between gap-2 p-2 rounded-lg bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-primary">Deteksi Multi-Wajah</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Flag otomatis jika ada individu lain dalam frame</span>
+</div>
+<div class="w-10 h-5 bg-primary rounded-full relative flex items-center p-0.5 cursor-pointer shrink-0">
+<div class="w-4 h-4 bg-surface-container-lowest rounded-full ml-auto shadow-sm"></div>
+</div>
+</div>
+<!-- Toggle 3: Ambient Audio Anomaly Analysis -->
+<div class="flex items-start justify-between gap-2 p-2 rounded-lg bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-primary">Audit Suara Sekitar</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Deteksi bisikan &amp; deviasi kebisingan audio mikrofon</span>
+</div>
+<div class="w-10 h-5 bg-primary rounded-full relative flex items-center p-0.5 cursor-pointer shrink-0">
+<div class="w-4 h-4 bg-surface-container-lowest rounded-full ml-auto shadow-sm"></div>
+</div>
+</div>
+<!-- Toggle 4: AI Code Plagiarism & LLM Detector -->
+<div class="flex items-start justify-between gap-2 p-2 rounded-lg bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-primary">Deteksi Kode LLM</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Pemeriksaan kemiripan AI (ChatGPT/Copilot) real-time</span>
+</div>
+<div class="w-10 h-5 bg-primary rounded-full relative flex items-center p-0.5 cursor-pointer shrink-0">
+<div class="w-4 h-4 bg-surface-container-lowest rounded-full ml-auto shadow-sm"></div>
+</div>
+</div>
+</div>
+<div class="pt-1">
+<a class="inline-flex items-center justify-center gap-1.5 w-full py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md font-semibold transition-colors" href="admin-dashboard.html#konfigurasi-sistem">
+<span>Konfigurasi Ambang Toleransi</span>
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</a>
+</div>
+</div>
+</aside>
+</div>
+<!-- Bottom Floating Notification / Drag Toast helper -->
+<div class="fixed bottom-6 right-6 z-40 flex items-center gap-3 px-4 py-3 rounded-xl bg-primary text-surface-container-lowest shadow-2xl backdrop-blur-md">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary-container animate-ping"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold leading-tight">Drag-and-Drop Aktif</span>
+<span class="font-body-sm text-[11px] text-on-primary-container leading-tight">Geser kartu dari bank soal langsung ke kanvas perakitan</span>
+</div>
+<button class="ml-2 text-on-primary-container hover:text-surface-container-lowest transition-colors" onclick="this.parentElement.remove()">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div></main></div></body></html>

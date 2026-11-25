@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ARCI EXAM - Direktori Template & Demo Web App</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --color-primary: #000922;
+  --color-secondary: #006591;
+  --color-surface: #f8f9ff;
+  --color-surface-card: #ffffff;
+  --color-on-surface: #0b1c30;
+  --color-on-surface-variant: #45464e;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Plus Jakarta Sans", "Inter", sans-serif;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+}
+body {
+  background: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-sans);
+  padding: 3rem 1.5rem;
+}
+.container {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+.header-box {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.card {
+  background: var(--color-surface-card);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(197, 198, 207, 0.4);
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(15, 32, 66, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(15, 32, 66, 0.08);
+}
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.btn {
+  display: inline-block;
+  text-align: center;
+  padding: 0.625rem 1rem;
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  margin-top: 1rem;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header-box">
+    <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.375rem 0.875rem; background: #fff; border-radius: 9999px; border: 1px solid rgba(197, 198, 207, 0.4); margin-bottom: 0.75rem;">
+      <span style="width: 0.5rem; height: 0.5rem; border-radius: 9999px; background: #009c6b;"></span>
+      <span style="font-size: 0.75rem; font-weight: 700;">PROYEK ARCI EXAM 2026</span>
+    </div>
+    <h1 style="font-size: 2rem; font-weight: 800; color: var(--color-primary); margin-bottom: 0.5rem;">Direktori Template Web App ARCI EXAM</h1>
+    <p style="font-size: 0.9375rem; color: var(--color-on-surface-variant); max-width: 40rem; margin: 0 auto;">
+      Seluruh template antarmuka untuk portal utama, autentikasi peran, sesi ujian siswa / mahasiswa, dashboard instruktur, pembuat soal, konsol pengawas, dan panel admin.
+    </p>
+  </div>
+
+  <div class="grid">
+    <!-- Template 1: Portal Utama -->
+    <div class="card">
+      <div>
+        <span class="badge" style="background: #e0f2fe; color: #0369a1;">Halaman Depan (Desktop)</span>
+        <h2 style="font-size: 1.125rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">1. Portal Utama (Web Standard)</h2>
+        <p style="font-size: 0.8125rem; color: var(--color-on-surface-variant); line-height: 1.5;">
+          Hero section interaktif, telemetri mock, 4 bento capabilities, switcher 4 peran (instruktur/siswa / mahasiswa/pengawas/admin), skema harga institusi, dan tabel perbandingan spesifikasi lengkap.
+        </p>
+      </div>
+      <a class="btn" href="portal.html">Buka Portal Utama →</a>
+    </div>
+
+    <!-- Template 1b: Portal Mobile -->
+    <div class="card">
+      <div>
+        <span class="badge" style="background: #cffafe; color: #0e7490;">Halaman Depan (Mobile)</span>
+        <h2 style="font-size: 1.125rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">1b. Portal Mobile (Responsive Tab)</h2>
+        <p style="font-size: 0.8125rem; color: var(--color-on-surface-variant); line-height: 1.5;">
+          Versi mobile-first dengan bottom navigation bar, Tailwind CSS tokens, 2x2 metrics grid, interactive demo soal, billing toggle, dan matriks fitur swipe-friendly.
+        </p>
+      </div>
+      <a class="btn" href="portal-mobile.html">Buka Portal Mobile →</a>
+    </div>
+
+    <!-- Template 2: Login & SSO -->
+    <div class="card">
+      <div>
+        <span class="badge" style="background: #fef3c7; color: #92400e;">Autentikasi</span>
+        <h2 style="font-size: 1.125rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">2. Login & Akses Peran</h2>
+        <p style="font-size: 0.8125rem; color: var(--color-on-surface-variant); line-height: 1.5;">
+          Halaman login multi-peran dengan input kode token ujian siswa / mahasiswa, formulir NIP/NISN / NIM, serta tombol SSO Google Workspace dan Azure AD sekolah / kampus.
+        </p>
+      </div>
+      <a class="btn" href="login.html">Buka Halaman Login →</a>
+    </div>
+
+    <!-- Template 3a: Student Dashboard -->
+    <div class="card">
+      <div>
+        <span class="badge" style="background: #dbeafe; color: #1e40af;">Portal Siswa / Mahasiswa</span>
+        <h2 style="font-size: 1.125rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">3a. Dasbor Utama Siswa / Mahasiswa</h2>
+        <p style="font-size: 0.8125rem; color: var(--color-on-surface-variant); line-height: 1.5;">
+          Jadwal ujian mendatang dengan countdown, diagnostik mandiri webcam/mikrofon/jaringan, riwayat transkrip nilai, sertifikat PDF, dan tiket sanggah nilai.
+        </p>
+      </div>
+      <a class="btn" href="student-dashboard.html">Buka Dasbor Siswa / Mahasiswa →</a>
+    </div>
+
+    <!-- Template 3: Student Live Exam -->
+    <div class="card">
+      <div>
+        <span class="badge" style="background: #dcfce7; color: #166534;">Sesi Ujian</span>
+        <h2 style="font-size: 1.125rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">3. Sesi Ujian Siswa / Mahasiswa</h2>
+        <p style="font-size: 0.8125rem; color: var(--color-on-surface-variant); line-height: 1.5;">
+          Antarmuka ujian 3 panel: matriks navigasi soal 1-60, kanvas pengerjaan soal dan autosave, timer countdown, serta panel webcam dan telemetri AI proctoring aktif.
+        </p>
+      </div>
+      <a class="btn" href="student-exam.html">Buka Sesi Ujian →</a>
+    </div>
+
+    <!-- Template 3b: Exam Results & Confirmation -->
+    <div class="card">
+      <div>
+        <span class="badge" style="background: #d1fae5; color: #065f46;">Pasca Ujian</span>
+        <h2 style="font-size: 1.125rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">3b. Konfirmasi &amp; Hasil Ujian</h2>
+        <p style="font-size: 0.8125rem; color: var(--color-on-surface-variant); line-height: 1.5;">
+          Modal konfirmasi akhir dengan audit status soal (terjawab, ragu-ragu, kosong) serta panel hasil penilaian, rincian bagian, dan sertifikat integritas SHA-256.
+        </p>
+      </div>
+      <a class="btn" href="exam-results.html">Buka Konfirmasi &amp; Hasil →</a>
+    </div>
+
+    <!-- Template 4: Instructor Dashboard -->
+    <div class="card">
+      <div>
+        <span class="badge" style="background: #ede9fe; color: #6d28d9;">Pusat Instruktur</span>
+        <h2 style="font-size: 1.125rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">4. Dashboard Instruktur</h2>
+        <p style="font-size: 0.8125rem; color: var(--color-on-surface-variant); line-height: 1.5;">
+          Statistik metrik ujian, daftar kelas & evaluasi aktif, integrasi bank soal QTI 2.1, serta tautan langsung untuk memantau live proctoring.
+        </p>
+      </div>
+      <a class="btn" href="instructor-dashboard.html">Buka Dashboard Instruktur →</a>
+    </div>
+
+    <!-- Template 4b: Psychometric Analytics & Results -->
+    <div class="card">
+      <div>
+        <span class="badge" style="background: #e0e7ff; color: #3730a3;">Analitik &amp; OBE</span>
+        <h2 style="font-size: 1.125rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">4b. Analisis Psikometrik &amp; Hasil</h2>
+        <p style="font-size: 0.8125rem; color: var(--color-on-surface-variant); line-height: 1.5;">
+          Histogram sebaran nilai, proporsi grade huruf, ketercapaian pembelajaran (CPL/CPMK), analisis butir soal (P-Value &amp; D-Index), dan daftar remediasi.
+        </p>
+      </div>
+      <a class="btn" href="analytics-results.html">Buka Analisis &amp; Hasil →</a>
+    </div>
+
+    <!-- Template 5: Exam Builder -->
+    <div class="card">
+      <div>
+        <span class="badge" style="background: #fce7f3; color: #be185d;">Perakitan Soal</span>
+        <h2 style="font-size: 1.125rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">5. Pembuat Ujian (Exam Builder)</h2>
+        <p style="font-size: 0.8125rem; color: var(--color-on-surface-variant); line-height: 1.5;">
+          Editor soal WYSIWYG, manajemen daftar pertanyaan drag-and-drop, pengaturan durasi waktu, serta pengaturan proteksi anti-kecurangan peramban.
+        </p>
+      </div>
+      <a class="btn" href="exam-builder.html">Buka Exam Builder →</a>
+    </div>
+
+    <!-- Template 6: Live Proctor Console -->
+    <div class="card">
+      <div>
+        <span class="badge" style="background: #fee2e2; color: #991b1b;">Pengawasan AI</span>
+        <h2 style="font-size: 1.125rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">6. Konsol Pengawas (Proctor Live)</h2>
+        <p style="font-size: 0.8125rem; color: var(--color-on-surface-variant); line-height: 1.5;">
+          Tampilan grid umpan kamera video kandidat secara waktu-nyata, pendeteksian anomali wajah/audio, dan buku besar rekaman insiden pengawas.
+        </p>
+      </div>
+      <a class="btn" href="proctor-console.html">Buka Konsol Pengawas →</a>
+    </div>
+
+    <!-- Template 7: Administrator Panel -->
+    <div class="card">
+      <div>
+        <span class="badge" style="background: #e2e8f0; color: #1e293b;">Keamanan & Admin</span>
+        <h2 style="font-size: 1.125rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">7. Panel Administrator</h2>
+        <p style="font-size: 0.8125rem; color: var(--color-on-surface-variant); line-height: 1.5;">
+          Pengawasan infrastruktur edge sekolah / kampus, status integrasi LMS Canvas/Moodle, log audit kepatuhan FERPA/GDPR, dan kriptografi SHA-256.
+        </p>
+      </div>
+      <a class="btn" href="admin-dashboard.html">Buka Panel Admin →</a>
+    </div>
+
+    <!-- Template 7b: Admin AI & Server Config -->
+    <div class="card">
+      <div>
+        <span class="badge" style="background: #f1f5f9; color: #0f172a;">DevOps &amp; AI</span>
+        <h2 style="font-size: 1.125rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">7b. Konfigurasi Server &amp; AI Proctoring</h2>
+        <p style="font-size: 0.8125rem; color: var(--color-on-surface-variant); line-height: 1.5;">
+          Pengaturan kluster GPU NVIDIA H100, pipeline YOLOv8x-Face &amp; MediaPipe Iris, uji kalibrasi dry-run, hot-reload worker, dan audit log parameter AI.
+        </p>
+      </div>
+      <a class="btn" href="admin-ai-config.html">Buka Konfigurasi AI →</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
