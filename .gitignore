@@ -14,3 +14,7 @@ out/
 # Environment variables
 .env
 .env*.local
+
+# PRD & Static HTML Templates
+PRD_ARCI_EXAM.md
+app/html/
